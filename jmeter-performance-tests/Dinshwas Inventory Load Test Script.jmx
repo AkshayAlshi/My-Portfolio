@@ -1,0 +1,2641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Dinshaws Inventory Load Test Script" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.${project.version}. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="Accept" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+          </elementProp>
+          <elementProp name="Access-Control-Allow-Origin" elementType="Header">
+            <stringProp name="Header.name">Access-Control-Allow-Origin</stringProp>
+            <stringProp name="Header.value">*</stringProp>
+          </elementProp>
+          <elementProp name="Access-Control-Allow-Methods" elementType="Header">
+            <stringProp name="Header.name">Access-Control-Allow-Methods</stringProp>
+            <stringProp name="Header.value">GET, PUT, PATCH, POST, DELETE, OPTIONS</stringProp>
+          </elementProp>
+          <elementProp name="Access-Control-Allow-Credentials" elementType="Header">
+            <stringProp name="Header.name">Access-Control-Allow-Credentials</stringProp>
+            <stringProp name="Header.value">*</stringProp>
+          </elementProp>
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36</stringProp>
+          </elementProp>
+          <elementProp name="Access-Control-Allow-Headers" elementType="Header">
+            <stringProp name="Header.name">Access-Control-Allow-Headers</stringProp>
+            <stringProp name="Header.value">Origin, X-Requested-With, Content-Type, Accept</stringProp>
+          </elementProp>
+          <elementProp name="Content-Type" elementType="Header">
+            <stringProp name="Header.name">Content-Type</stringProp>
+            <stringProp name="Header.value">application/json</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">dinshawserptest.microproindia.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Date" elementType="Argument">
+            <stringProp name="Argument.name">Date</stringProp>
+            <stringProp name="Argument.value">2024-04-24</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Date1" elementType="Argument">
+            <stringProp name="Argument.name">Date1</stringProp>
+            <stringProp name="Argument.value">24/April/2024</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain"></stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+        <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+        <collectionProp name="AuthManager.auth_list"/>
+        <boolProp name="AuthManager.controlledByThreadGroup">false</boolProp>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+        <boolProp name="CacheManager.controlledByThread">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="Indent Creation_100 Users" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.num_threads">100</stringProp>
+        <stringProp name="Threads initial delay">0</stringProp>
+        <stringProp name="Start users count">1</stringProp>
+        <stringProp name="Start users count burst">0</stringProp>
+        <stringProp name="Start users period">30</stringProp>
+        <stringProp name="Stop users count">5</stringProp>
+        <stringProp name="Stop users period">1</stringProp>
+        <stringProp name="flighttime">60</stringProp>
+        <stringProp name="rampUp">5</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+      </kg.apc.jmeter.threads.SteppingThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="login_Indent_Logout" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Indent_Login_${UserId}" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;gmd_LoginId&quot;:&quot;${UserId}&quot;,&quot;gmd_Password&quot;:&quot;UXWrwK0dUIQoeyaSSrWnXA==&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">AdminService-1.0/admin/ctrl/all_login</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex_Token" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">Token</stringProp>
+              <stringProp name="RegexExtractor.regex">&quot;l_token&quot;:&quot;(.+?)&quot;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="User_CSV" enabled="true">
+              <stringProp name="filename">C:/Users/HP/Desktop/DMS_ Load _Testing/New/Indentcsv (1).csv</stringProp>
+              <stringProp name="fileEncoding"></stringProp>
+              <stringProp name="variableNames">UserId,Password</stringProp>
+              <boolProp name="ignoreFirstLine">true</boolProp>
+              <stringProp name="delimiter">,</stringProp>
+              <boolProp name="quotedData">false</boolProp>
+              <boolProp name="recycle">true</boolProp>
+              <boolProp name="stopThread">false</boolProp>
+              <stringProp name="shareMode">shareMode.all</stringProp>
+            </CSVDataSet>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Indent_Login Validate_${UserId}" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">AdminService-1.0/admin/ctrl/token_validate</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="TestPlan.comments">each user create 100 indent</stringProp>
+            <stringProp name="LoopController.loops">100</stringProp>
+          </LoopController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Indent_Create Indent_${UserId}" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+  &quot;l_Inv_Indent_Hdr_Model&quot;: {&#xd;
+    &quot;indh_entity_code_ent&quot;: &quot;001001000000000000&quot;,&#xd;
+    &quot;indh_material_type&quot;: &quot;G&quot;,&#xd;
+    &quot;indh_wf_doctype_dtyp&quot;: &quot;DT0017&quot;,&#xd;
+    &quot;indh_department_dept&quot;: &quot;DEPT000000000001&quot;,&#xd;
+    &quot;indh_fy_id_fyrm&quot;: &quot;FINM000000000003&quot;,&#xd;
+    &quot;indh_fy_display_desc&quot;: &quot;2024-25&quot;,&#xd;
+    &quot;indh_indent_date&quot;: &quot;${Date} 16:52:47&quot;,&#xd;
+    &quot;indh_currency_curr&quot;: &quot;INR&quot;,&#xd;
+    &quot;indh_wf_tag1_code&quot;: &quot;01&quot;,&#xd;
+    &quot;indh_wf_tag2_code&quot;: &quot;02&quot;,&#xd;
+    &quot;indh_wf_series_serm&quot;: &quot;SD&quot;,&#xd;
+    &quot;indh_indent_type_gmst&quot;: &quot;GENM000000000016&quot;,&#xd;
+    &quot;indh_terms_and_cond_gmst&quot;: &quot;GENM000000000073&quot;,&#xd;
+    &quot;indh_indent_amount&quot;: 210000,&#xd;
+    &quot;indh_isdraft&quot;: &quot;NO&quot;,&#xd;
+    &quot;indh_isworkflowapproved&quot;: &quot;YES&quot;,&#xd;
+    &quot;l_indh_indent_date&quot;: &quot;${Date1} 16:52 pm&quot;,&#xd;
+    &quot;indh_indent_id&quot;: &quot;&quot;,&#xd;
+    &quot;indh_indent_no&quot;: &quot;&quot;,&#xd;
+    &quot;indh_remarks&quot;: &quot;&quot;&#xd;
+  },&#xd;
+  &quot;l_Inv_Indent_Dtl_Line_Model&quot;: [&#xd;
+    {&#xd;
+      &quot;l_Inv_Indent_Del_Sch_Dtl_List&quot;: [&#xd;
+        {&#xd;
+          &quot;inds_id&quot;: &quot;&quot;,&#xd;
+          &quot;inds_delivery_dt&quot;: &quot;${Date}&quot;,&#xd;
+          &quot;inds_indent_dtl_id_indd&quot;: &quot;293723649&quot;,&#xd;
+          &quot;inds_delivery_qty&quot;: 2000,&#xd;
+          &quot;inds_pref_transporter&quot;: &quot; &quot;,&#xd;
+          &quot;inds_remarks&quot;: &quot;&quot;,&#xd;
+          &quot;l_new_entry&quot;: true,&#xd;
+          &quot;l_inds_delivery_dt_name&quot;: &quot;${Date1}&quot;,&#xd;
+          &quot;inds_indent_id_indh&quot;: &quot;&quot;&#xd;
+        }&#xd;
+      ],&#xd;
+      &quot;l_Inv_Indent_Dtl_Model&quot;: {&#xd;
+        &quot;indd_id&quot;: &quot;621599031&quot;,&#xd;
+        &quot;l_new_entry&quot;: &quot;YES&quot;,&#xd;
+        &quot;l_indd_required_by_dt_old&quot;: &quot;${Date}&quot;,&#xd;
+        &quot;indd_preferred_suppliers&quot;: &quot;CUST000000000395&quot;,&#xd;
+        &quot;indd_item_id_item&quot;: &quot;ITEM000000000163&quot;,&#xd;
+        &quot;indd_item_tech_desc&quot;: &quot;chocolate&quot;,&#xd;
+        &quot;indd_item_uom_unit&quot;: &quot;KG&quot;,&#xd;
+        &quot;indd_rate&quot;: 105,&#xd;
+        &quot;indd_indent_qty&quot;: 2000,&#xd;
+        &quot;l_inv_indent_del_sch_dtl_List&quot;: [&#xd;
+          {&#xd;
+            &quot;inds_id&quot;: &quot;952397378&quot;,&#xd;
+            &quot;inds_delivery_dt&quot;: &quot;${Date}&quot;,&#xd;
+            &quot;inds_indent_dtl_id_indd&quot;: &quot;621599031&quot;,&#xd;
+            &quot;inds_delivery_qty&quot;: 2000,&#xd;
+            &quot;inds_pref_transporter&quot;: &quot;&quot;,&#xd;
+            &quot;inds_remarks&quot;: &quot;&quot;,&#xd;
+            &quot;l_new_entry&quot;: true,&#xd;
+            &quot;l_inds_delivery_dt_name&quot;: &quot;${Date1}&quot;&#xd;
+          }&#xd;
+        ],&#xd;
+        &quot;indd_required_by_dt&quot;: &quot;${Date}&quot;,&#xd;
+        &quot;indd_item_name&quot;: &quot;DARK CHOCOLATE&quot;,&#xd;
+        &quot;indd_item_code&quot;: &quot;FG006&quot;,&#xd;
+        &quot;l_indd_required_by_dt_name&quot;: &quot;${Date1}&quot;,&#xd;
+        &quot;l_inds_delivery_dt&quot;: &quot;&quot;,&#xd;
+        &quot;l_indd_indent_amount&quot;: 210000,&#xd;
+        &quot;l_indd_item_name&quot;: &quot;FG006 - DARK CHOCOLATE&quot;,&#xd;
+        &quot;indd_enquiry_status&quot;: &quot;NO&quot;,&#xd;
+        &quot;indd_po_status&quot;: &quot;NO&quot;,&#xd;
+        &quot;indd_srno&quot;: 0,&#xd;
+        &quot;indd_remarks&quot;: &quot;&quot;&#xd;
+      }&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">InventoryService-1.0/inventory/ctrl/create_indent</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Authorization" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex_IndentID" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">IndentID</stringProp>
+                <stringProp name="RegexExtractor.regex">&quot;l_id&quot;:&quot;INDH1b7a280c18624c3a936b423bc352d8fb&quot;</stringProp>
+                <stringProp name="RegexExtractor.template"></stringProp>
+                <stringProp name="RegexExtractor.default"></stringProp>
+                <stringProp name="RegexExtractor.match_number"></stringProp>
+              </RegexExtractor>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Indent_Logout_${UserId}" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;gmd_LoginId&quot;:&quot;${UserId}&quot;,&quot;gmd_refreshkey&quot;:&quot;Vs7_-LUi9tQHIcVrIs7DW6oVsLo&quot;,&quot;gmd_tokenkey&quot;:&quot;HfWKsyPydqDzj-60rGDWrMrKu5g&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">AdminService-1.0/admin/ctrl/all_logout</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="Indent PO Creation_100 Users" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.num_threads">100</stringProp>
+        <stringProp name="Threads initial delay">0</stringProp>
+        <stringProp name="Start users count">1</stringProp>
+        <stringProp name="Start users count burst">0</stringProp>
+        <stringProp name="Start users period">30</stringProp>
+        <stringProp name="Stop users count">5</stringProp>
+        <stringProp name="Stop users period">1</stringProp>
+        <stringProp name="flighttime">60</stringProp>
+        <stringProp name="rampUp">5</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+      </kg.apc.jmeter.threads.SteppingThreadGroup>
+      <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </Arguments>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Login_Indent PO_Logout" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Indent PO_Login_${UserId}" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;gmd_LoginId&quot;:&quot;${UserId}&quot;,&quot;gmd_Password&quot;:&quot;UXWrwK0dUIQoeyaSSrWnXA==&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">AdminService-1.0/admin/ctrl/all_login</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex_Token" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">Token</stringProp>
+              <stringProp name="RegexExtractor.regex">&quot;l_token&quot;:&quot;(.+?)&quot;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="User_CSV" enabled="true">
+              <stringProp name="filename">C:/Users/HP/Desktop/DMS_ Load _Testing/New/Indentcsv (1).csv</stringProp>
+              <stringProp name="fileEncoding"></stringProp>
+              <stringProp name="variableNames">UserId,Password</stringProp>
+              <boolProp name="ignoreFirstLine">true</boolProp>
+              <stringProp name="delimiter">,</stringProp>
+              <boolProp name="quotedData">false</boolProp>
+              <boolProp name="recycle">true</boolProp>
+              <boolProp name="stopThread">false</boolProp>
+              <stringProp name="shareMode">shareMode.all</stringProp>
+            </CSVDataSet>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Rgex_UserID" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">UserID</stringProp>
+              <stringProp name="RegexExtractor.regex">&quot;l_userid&quot;:&quot;(.+?)&quot;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Indent PO_Validate Login_${UserId}" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">AdminService-1.0/admin/ctrl/token_validate</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Indent PO_Get Indnet Item for PO_${UserId}" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;l_entitycode&quot;:&quot;001001000000000000&quot;,&quot;l_userid&quot;:&quot;${UserID}&quot;,&quot;l_fy_id&quot;:&quot;FINM000000000003&quot;,&quot;l_department&quot;:&quot;DEPT000000000001&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">InventoryService-1.0/inventory/ctrl/get_item_po</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">100</stringProp>
+          </LoopController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Indent PO_Get Pending Indent_${UserId}" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;l_department&quot;:&quot;DEPT000000000001&quot;,&quot;l_entitycode&quot;:&quot;001001000000000000&quot;,&quot;l_fy_id&quot;:&quot;FINM000000000003&quot;,&quot;l_userid&quot;:&quot;${UserID}&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">InventoryService-1.0/inventory/ctrl/get_pending_indent</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Authorization" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex_Indent_Header_Id" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">Indent_Header_Id</stringProp>
+                <stringProp name="RegexExtractor.regex">&quot;indh_indent_id&quot;:&quot;(.+?)&quot;</stringProp>
+                <stringProp name="RegexExtractor.template"></stringProp>
+                <stringProp name="RegexExtractor.default"></stringProp>
+                <stringProp name="RegexExtractor.match_number"></stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex_Indent_Dtl_ID" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">Indent_Dtl_ID</stringProp>
+                <stringProp name="RegexExtractor.regex">&quot;indd_id&quot;:&quot;(.+?)&quot;</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default"></stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Indent PO_Create Indent PO_${UserId}" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+  &quot;l_Inv_Po_Hdr_Model&quot;: {&#xd;
+    &quot;poh_po_no&quot;: &quot;&quot;,&#xd;
+    &quot;poh_po_id&quot;: &quot;&quot;,&#xd;
+    &quot;poh_wf_series_serm&quot;: &quot;POI&quot;,&#xd;
+    &quot;poh_enquiry_id_ineh&quot;: &quot; &quot;,&#xd;
+    &quot;poh_quoh_id_quoh&quot;: &quot; &quot;,&#xd;
+    &quot;poh_shipto_type&quot;: &quot;S&quot;,&#xd;
+    &quot;poh_exchange_rate&quot;: 1,&#xd;
+    &quot;poh_remarks&quot;: &quot; &quot;,&#xd;
+    &quot;poh_entity_code_ent&quot;: &quot;001001000000000000&quot;,&#xd;
+    &quot;poh_currrency_curr&quot;: &quot;INR&quot;,&#xd;
+    &quot;poh_po_dt&quot;: &quot;${Date}&quot;,&#xd;
+    &quot;poh_from_dt&quot;: &quot;${Date}&quot;,&#xd;
+    &quot;poh_wf_doctype_dtyp&quot;: &quot;DT0021&quot;,&#xd;
+    &quot;poh_fy_id_fyrm&quot;: &quot;FINM000000000003&quot;,&#xd;
+    &quot;poh_fy_display_desc&quot;: &quot;2024-25&quot;,&#xd;
+    &quot;poh_billto_entity_code_ent&quot;: &quot;001001000000000000&quot;,&#xd;
+    &quot;poh_billing_add_name&quot;: &quot;Ankush&quot;,&#xd;
+    &quot;poh_billing_add_address&quot;: &quot;K-41/42, Butibori Industrial Area, Butibori&quot;,&#xd;
+    &quot;poh_billing_add_city&quot;: &quot;NAGPUR&quot;,&#xd;
+    &quot;poh_billing_add_county_cntr&quot;: &quot;IN&quot;,&#xd;
+    &quot;poh_billing_add_state_stat&quot;: &quot;MH&quot;,&#xd;
+    &quot;poh_billing_add_zip&quot;: &quot;441122&quot;,&#xd;
+    &quot;poh_billing_add_phone&quot;: &quot;+916546546546&quot;,&#xd;
+    &quot;poh_shipto_entity_code_ent&quot;: &quot;001001000000000000&quot;,&#xd;
+    &quot;poh_shipto_add_name&quot;: &quot;Ankush&quot;,&#xd;
+    &quot;poh_shipto_add_address&quot;: &quot;K-41/42, Butibori Industrial Area, Butibori&quot;,&#xd;
+    &quot;poh_shipto_add_city&quot;: &quot;NAGPUR&quot;,&#xd;
+    &quot;poh_shipto_add_county_cntr&quot;: &quot;IN&quot;,&#xd;
+    &quot;poh_shipto_add_state_stat&quot;: &quot;MH&quot;,&#xd;
+    &quot;poh_shipto_add_zip&quot;: &quot;441122&quot;,&#xd;
+    &quot;poh_shipto_add_phone&quot;: &quot;+916546546546&quot;,&#xd;
+    &quot;poh_desp_mode_gmst&quot;: &quot;GENM000000000076&quot;,&#xd;
+    &quot;poh_to_dt&quot;: &quot;2024-05-10&quot;,&#xd;
+    &quot;poh_wf_tag1_code&quot;: &quot;01&quot;,&#xd;
+    &quot;poh_wf_tag2_code&quot;: &quot;02&quot;,&#xd;
+    &quot;poh_party_code&quot;: &quot;3456&quot;,&#xd;
+    &quot;poh_party_name&quot;: &quot;NEW PARTY&quot;,&#xd;
+    &quot;poh_party_add_phone&quot;: &quot;+915467878765&quot;,&#xd;
+    &quot;poh_party_id_acnt&quot;: &quot;CUST000000000395&quot;,&#xd;
+    &quot;poh_tcs_tax&quot;: &quot; &quot;,&#xd;
+    &quot;poh_tcs_percent&quot;: 0,&#xd;
+    &quot;poh_tcs_amount&quot;: 0,&#xd;
+    &quot;poh_tax_amount_total&quot;: 200,&#xd;
+    &quot;poh_net_amount_total&quot;: 4200,&#xd;
+    &quot;poh_net_amount_curr&quot;: 4200,&#xd;
+    &quot;poh_round_off_value&quot;: 0,&#xd;
+    &quot;poh_party_add_name&quot;: &quot;Neha&quot;,&#xd;
+    &quot;poh_party_add_address&quot;: &quot;Nagpur&quot;,&#xd;
+    &quot;poh_party_add_city&quot;: &quot;Nagpur&quot;,&#xd;
+    &quot;poh_party_add_county_cntr&quot;: &quot;IN&quot;,&#xd;
+    &quot;poh_party_add_state_stat&quot;: &quot;MH&quot;,&#xd;
+    &quot;poh_party_add_zip&quot;: &quot;440002&quot;,&#xd;
+    &quot;poh_credit_days&quot;: 12,&#xd;
+    &quot;poh_delivery_dt&quot;: &quot;2024-04-10&quot;,&#xd;
+    &quot;poh_delivery_at&quot;: &quot;NGP&quot;,&#xd;
+    &quot;poh_delivery_point&quot;: &quot;NGP&quot;,&#xd;
+    &quot;poh_pref_transporter&quot;: &quot;NA&quot;,&#xd;
+    &quot;poh_terms_and_conditions&quot;: &quot;GENM000000000073&quot;,&#xd;
+    &quot;poh_gross_amout_total&quot;: 4000,&#xd;
+    &quot;poh_isdraft&quot;: &quot;NO&quot;,&#xd;
+    &quot;poh_isworkflowapproved&quot;: &quot;YES&quot;,&#xd;
+    &quot;l_poh_po_dt&quot;: &quot;${Date1}&quot;,&#xd;
+    &quot;l_poh_from_dt&quot;: &quot;${Date1}&quot;,&#xd;
+    &quot;l_poh_to_dt&quot;: &quot;${Date1}&quot;,&#xd;
+    &quot;l_poh_delivery_dt&quot;: &quot;${Date1}&quot;,&#xd;
+    &quot;poh_po_rev&quot;: 0,&#xd;
+    &quot;poh_po_parent&quot;: &quot; &quot;,&#xd;
+    &quot;poh_is_closed&quot;: &quot;NO&quot;&#xd;
+  },&#xd;
+  &quot;l_Inv_Po_Dtl_Line_Model&quot;: [&#xd;
+    {&#xd;
+      &quot;l_Inv_Po_Dtl_Model&quot;: {&#xd;
+        &quot;pod_discount_per&quot;: 0,&#xd;
+        &quot;pod_pkg_forward_per&quot;: 0,&#xd;
+        &quot;pod_item_tolerance&quot;: 0,&#xd;
+        &quot;pod_igst_per_taxm&quot;: 5,&#xd;
+        &quot;pod_cgst_per_taxm&quot;: 2.5,&#xd;
+        &quot;pod_sgst_per_taxm&quot;: 2.5,&#xd;
+        &quot;pod_ugst_per_taxm&quot;: 2.5,&#xd;
+        &quot;pod_cess_per_taxm&quot;: 0,&#xd;
+        &quot;pod_surcharge_per_taxm&quot;: 0,&#xd;
+        &quot;pod_vat_per_taxm&quot;: 0,&#xd;
+        &quot;pod_po_uom_unit&quot;: &quot;KG&quot;,&#xd;
+        &quot;pod_stock_uom_unit&quot;: &quot;KG&quot;,&#xd;
+        &quot;pod_item_code&quot;: &quot;FG006&quot;,&#xd;
+        &quot;pod_item_name&quot;: &quot;DARK CHOCOLATE&quot;,&#xd;
+        &quot;pod_qty&quot;: 200,&#xd;
+        &quot;pod_item_id_item&quot;: &quot;ITEM000000000163&quot;,&#xd;
+        &quot;pod_id&quot;: &quot;&quot;,&#xd;
+        &quot;pod_tech_specs&quot;: &quot;&quot;,&#xd;
+        &quot;l_pod_item_name&quot;: &quot;FG006 - DARK CHOCOLATE&quot;,&#xd;
+        &quot;pod_taxrate_taxm&quot;: &quot;TAXM000000000003&quot;,&#xd;
+        &quot;l_new_entry&quot;: true,&#xd;
+        &quot;pod_shipto_add_name&quot;: &quot;Ankush&quot;,&#xd;
+        &quot;pod_shipto_add_address&quot;: &quot;K-41/42, Butibori Industrial Area, Butibori&quot;,&#xd;
+        &quot;pod_shipto_add_city&quot;: &quot;NAGPUR&quot;,&#xd;
+        &quot;pod_shipto_add_county_cntr&quot;: &quot;IN&quot;,&#xd;
+        &quot;pod_shipto_add_state_stat&quot;: &quot;MH&quot;,&#xd;
+        &quot;pod_shipto_add_zip&quot;: &quot;441122&quot;,&#xd;
+        &quot;pod_shipto_add_phone&quot;: &quot;+916546546546&quot;,&#xd;
+        &quot;pod_net_rate&quot;: 20,&#xd;
+        &quot;pod_pkg_forwd_amout&quot;: 0,&#xd;
+        &quot;pod_gross_amount&quot;: 4000,&#xd;
+        &quot;pod_net_amount&quot;: 4200,&#xd;
+        &quot;pod_total_taxes&quot;: 200,&#xd;
+        &quot;pod_ugst_amount&quot;: 0,&#xd;
+        &quot;pod_cgst_amount&quot;: 100,&#xd;
+        &quot;pod_sgst_amount&quot;: 100,&#xd;
+        &quot;pod_igst_amount&quot;: 0,&#xd;
+        &quot;l_inv_po_delivery_dtl&quot;: [&#xd;
+          {&#xd;
+            &quot;podd_id&quot;: &quot; &quot;,&#xd;
+            &quot;podd_po_dtl_id_pod&quot;: &quot; &quot;,&#xd;
+            &quot;podd_po_id_poh&quot;: &quot;&quot;,&#xd;
+            &quot;podd_delivery_qty&quot;: 200,&#xd;
+            &quot;podd_delivery_date&quot;: &quot;${Date}T18:30:00.000Z&quot;,&#xd;
+            &quot;podd_delivery_seq&quot;: 1,&#xd;
+            &quot;l_new_entry&quot;: true,&#xd;
+            &quot;l_auto_delivery&quot;: true&#xd;
+          }&#xd;
+        ],&#xd;
+        &quot;pod_rate&quot;: 20,&#xd;
+        &quot;pod_shipto_entity_code_ent&quot;: &quot;001001000000000000&quot;,&#xd;
+        &quot;pod_po_id_poh&quot;: &quot;&quot;,&#xd;
+        &quot;pod_po_rev&quot;: 0,&#xd;
+        &quot;pod_po_srno&quot;: 0,&#xd;
+        &quot;pod_free_qty&quot;: 0,&#xd;
+        &quot;pod_tax1_per_taxm&quot;: 0,&#xd;
+        &quot;pod_tax2_per_taxm&quot;: 0,&#xd;
+        &quot;pod_tax3_per_taxm&quot;: 0,&#xd;
+        &quot;pod_cess_amount&quot;: 0,&#xd;
+        &quot;pod_surcharge_amount&quot;: 0,&#xd;
+        &quot;pod_vat_amount&quot;: 0,&#xd;
+        &quot;pod_tax1_amount&quot;: 0,&#xd;
+        &quot;pod_tax2_amount&quot;: 0,&#xd;
+        &quot;pod_tax3_amount&quot;: 0,&#xd;
+        &quot;pod_rec_qty&quot;: 0,&#xd;
+        &quot;pod_status&quot;: &quot;&quot;&#xd;
+      },&#xd;
+      &quot;l_Inv_Po_Indent_Dtl_List&quot;: [&#xd;
+        {&#xd;
+          &quot;poid_indent_dtl_indd&quot;: &quot;${Indent_Dtl_ID}&quot;,&#xd;
+          &quot;poid_indent_id_indh&quot;: &quot;${Indent_Header_Id}&quot;,&#xd;
+          &quot;poid_po_dtl_id_pod&quot;: &quot;&quot;,&#xd;
+          &quot;poid_po_id_poh&quot;: &quot;&quot;,&#xd;
+          &quot;poid_indent_quantity&quot;: 200,&#xd;
+          &quot;poid_po_quantity&quot;: 200&#xd;
+        }&#xd;
+      ],&#xd;
+      &quot;l_Inv_Po_Quot_Dtl_List&quot;: [],&#xd;
+      &quot;l_Inv_Po_Delivery_Dtl_List&quot;: [&#xd;
+        {&#xd;
+          &quot;podd_id&quot;: &quot; &quot;,&#xd;
+          &quot;podd_po_dtl_id_pod&quot;: &quot;&quot;,&#xd;
+          &quot;podd_po_id_poh&quot;: &quot;&quot;,&#xd;
+          &quot;podd_delivery_qty&quot;: 200,&#xd;
+          &quot;podd_delivery_date&quot;: &quot;${Date}&quot;,&#xd;
+          &quot;podd_delivery_seq&quot;: 1,&#xd;
+          &quot;l_new_entry&quot;: true,&#xd;
+          &quot;l_auto_delivery&quot;: true,&#xd;
+          &quot;l_podd_po_dtl_id_pod&quot;: &quot;aN/undefined/NaN&quot;,&#xd;
+          &quot;l_podd_delivery_date&quot;: &quot;${Date1}&quot;&#xd;
+        }&#xd;
+      ]&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;l_Inv_Po_Payterms_Dtl_List&quot;: [&#xd;
+    {&#xd;
+      &quot;popt_payterm_id_gmst&quot;: &quot;GENM000000000059&quot;,&#xd;
+      &quot;popt_param_1&quot;: 1,&#xd;
+      &quot;popt_param_2&quot;: 0,&#xd;
+      &quot;gmst_description&quot;: &quot;Advance Payment X %&quot;,&#xd;
+      &quot;popt_po_id_poh&quot;: &quot;&quot;,&#xd;
+      &quot;popt_id&quot;: &quot;&quot;,&#xd;
+      &quot;popt_po_rev&quot;: 0,&#xd;
+      &quot;popt_srno&quot;: 0&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">InventoryService-1.0/inventory/ctrl/save_update_po</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Authorization" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Indent PO_Logout_${UserId}" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;gmd_LoginId&quot;:&quot;${UserId}&quot;,&quot;gmd_refreshkey&quot;:&quot;mFoz9L-wD7XvSA_WPUVNdDJTkvs&quot;,&quot;gmd_tokenkey&quot;:&quot;${Token}&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">AdminService-1.0/admin/ctrl/all_logout</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="GRN Creation_100 Users" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.num_threads">100</stringProp>
+        <stringProp name="Threads initial delay">0</stringProp>
+        <stringProp name="Start users count">1</stringProp>
+        <stringProp name="Start users count burst">0</stringProp>
+        <stringProp name="Start users period">30</stringProp>
+        <stringProp name="Stop users count">5</stringProp>
+        <stringProp name="Stop users period">1</stringProp>
+        <stringProp name="flighttime">60</stringProp>
+        <stringProp name="rampUp">5</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+      </kg.apc.jmeter.threads.SteppingThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Login_GRN_Logout" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GRN_Login_${UserId}" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;gmd_LoginId&quot;:&quot;system&quot;,&quot;gmd_Password&quot;:&quot;W7qT9oD+/2+UinUzuVW60w==&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">AdminService-1.0/admin/ctrl/all_login</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex_Token" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">Token</stringProp>
+              <stringProp name="RegexExtractor.regex">&quot;l_token&quot;:&quot;(.+?)&quot;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="User_CSV" enabled="true">
+              <stringProp name="filename">C:/Users/HP/Desktop/DMS_ Load _Testing/New/GRN_user.csv</stringProp>
+              <stringProp name="fileEncoding"></stringProp>
+              <stringProp name="variableNames">UserId,Password</stringProp>
+              <boolProp name="ignoreFirstLine">true</boolProp>
+              <stringProp name="delimiter">,</stringProp>
+              <boolProp name="quotedData">false</boolProp>
+              <boolProp name="recycle">true</boolProp>
+              <boolProp name="stopThread">false</boolProp>
+              <stringProp name="shareMode">shareMode.all</stringProp>
+            </CSVDataSet>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GRN_Login Validate_${UserId}" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">AdminService-1.0/admin/ctrl/token_validate</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">50</stringProp>
+          </LoopController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GRN_Create Direct PO_${UserId}" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+  &quot;l_Inv_Po_Hdr_Model&quot;: {&#xd;
+    &quot;poh_po_no&quot;: &quot;&quot;,&#xd;
+    &quot;poh_po_id&quot;: &quot;&quot;,&#xd;
+    &quot;poh_wf_series_serm&quot;: &quot;POD&quot;,&#xd;
+    &quot;poh_enquiry_id_ineh&quot;: &quot; &quot;,&#xd;
+    &quot;poh_quoh_id_quoh&quot;: &quot; &quot;,&#xd;
+    &quot;poh_shipto_type&quot;: &quot;S&quot;,&#xd;
+    &quot;poh_exchange_rate&quot;: 1,&#xd;
+    &quot;poh_remarks&quot;: &quot; &quot;,&#xd;
+    &quot;poh_entity_code_ent&quot;: &quot;001001000000000000&quot;,&#xd;
+    &quot;poh_currrency_curr&quot;: &quot;INR&quot;,&#xd;
+    &quot;poh_po_dt&quot;: &quot;${Date}&quot;,&#xd;
+    &quot;poh_from_dt&quot;: &quot;${Date}&quot;,&#xd;
+    &quot;poh_wf_doctype_dtyp&quot;: &quot;DT0021&quot;,&#xd;
+    &quot;poh_fy_id_fyrm&quot;: &quot;FINM000000000003&quot;,&#xd;
+    &quot;poh_fy_display_desc&quot;: &quot;2024-25&quot;,&#xd;
+    &quot;poh_billto_entity_code_ent&quot;: &quot;001001000000000000&quot;,&#xd;
+    &quot;poh_billing_add_name&quot;: &quot;Ankush&quot;,&#xd;
+    &quot;poh_billing_add_address&quot;: &quot;K-41/42, Butibori Industrial Area, Butibori&quot;,&#xd;
+    &quot;poh_billing_add_city&quot;: &quot;NAGPUR&quot;,&#xd;
+    &quot;poh_billing_add_county_cntr&quot;: &quot;IN&quot;,&#xd;
+    &quot;poh_billing_add_state_stat&quot;: &quot;MH&quot;,&#xd;
+    &quot;poh_billing_add_zip&quot;: &quot;441122&quot;,&#xd;
+    &quot;poh_billing_add_phone&quot;: &quot;+916546546546&quot;,&#xd;
+    &quot;poh_shipto_entity_code_ent&quot;: &quot;001001000000000000&quot;,&#xd;
+    &quot;poh_shipto_add_name&quot;: &quot;Ankush&quot;,&#xd;
+    &quot;poh_shipto_add_address&quot;: &quot;K-41/42, Butibori Industrial Area, Butibori&quot;,&#xd;
+    &quot;poh_shipto_add_city&quot;: &quot;NAGPUR&quot;,&#xd;
+    &quot;poh_shipto_add_county_cntr&quot;: &quot;IN&quot;,&#xd;
+    &quot;poh_shipto_add_state_stat&quot;: &quot;MH&quot;,&#xd;
+    &quot;poh_shipto_add_zip&quot;: &quot;441122&quot;,&#xd;
+    &quot;poh_shipto_add_phone&quot;: &quot;+916546546546&quot;,&#xd;
+    &quot;poh_desp_mode_gmst&quot;: &quot;GENM000000000076&quot;,&#xd;
+    &quot;poh_to_dt&quot;: &quot;2024-05-20&quot;,&#xd;
+    &quot;poh_wf_tag1_code&quot;: &quot;01&quot;,&#xd;
+    &quot;poh_wf_tag2_code&quot;: &quot;02&quot;,&#xd;
+    &quot;poh_party_code&quot;: &quot;BBC001&quot;,&#xd;
+    &quot;poh_party_name&quot;: &quot;BBC PARTY&quot;,&#xd;
+    &quot;poh_party_add_phone&quot;: &quot;+918924264638&quot;,&#xd;
+    &quot;poh_party_id_acnt&quot;: &quot;CUST000000000399&quot;,&#xd;
+    &quot;poh_tcs_tax&quot;: &quot;CUST000000000031&quot;,&#xd;
+    &quot;poh_tcs_percent&quot;: 1.2,&#xd;
+    &quot;poh_tcs_amount&quot;: 56.64,&#xd;
+    &quot;poh_tax_amount_total&quot;: 720,&#xd;
+    &quot;poh_net_amount_total&quot;: 4776.64,&#xd;
+    &quot;poh_net_amount_curr&quot;: 4776.64,&#xd;
+    &quot;poh_round_off_value&quot;: 0.36,&#xd;
+    &quot;poh_party_add_name&quot;: &quot;Shreyash S&quot;,&#xd;
+    &quot;poh_party_add_address&quot;: &quot;nagpur&quot;,&#xd;
+    &quot;poh_party_add_city&quot;: &quot;Nagpur&quot;,&#xd;
+    &quot;poh_party_add_county_cntr&quot;: &quot;IN&quot;,&#xd;
+    &quot;poh_party_add_state_stat&quot;: &quot;MH&quot;,&#xd;
+    &quot;poh_party_add_zip&quot;: &quot;444001&quot;,&#xd;
+    &quot;poh_credit_days&quot;: 12,&#xd;
+    &quot;poh_delivery_dt&quot;: &quot;${Date}&quot;,&#xd;
+    &quot;poh_delivery_at&quot;: &quot;Nagpur&quot;,&#xd;
+    &quot;poh_delivery_point&quot;: &quot;Nagpur&quot;,&#xd;
+    &quot;poh_pref_transporter&quot;: &quot;NA&quot;,&#xd;
+    &quot;poh_terms_and_conditions&quot;: &quot;GENM000000000073&quot;,&#xd;
+    &quot;poh_gross_amout_total&quot;: 4000,&#xd;
+    &quot;poh_isdraft&quot;: &quot;NO&quot;,&#xd;
+    &quot;poh_isworkflowapproved&quot;: &quot;YES&quot;,&#xd;
+    &quot;l_poh_po_dt&quot;: &quot;${Date1}&quot;,&#xd;
+    &quot;l_poh_from_dt&quot;: &quot;${Date1}&quot;,&#xd;
+    &quot;l_poh_to_dt&quot;: &quot;20/May/2024&quot;,&#xd;
+    &quot;l_poh_delivery_dt&quot;: &quot;${Date1}&quot;,&#xd;
+    &quot;poh_po_rev&quot;: 0,&#xd;
+    &quot;poh_po_parent&quot;: &quot; &quot;,&#xd;
+    &quot;poh_is_closed&quot;: &quot;NO&quot;&#xd;
+  },&#xd;
+  &quot;l_Inv_Po_Dtl_Line_Model&quot;: [&#xd;
+    {&#xd;
+      &quot;l_Inv_Po_Dtl_Model&quot;: {&#xd;
+        &quot;pod_id&quot;: &quot;&quot;,&#xd;
+        &quot;l_new_entry&quot;: true,&#xd;
+        &quot;pod_item_tolerance&quot;: 0,&#xd;
+        &quot;pod_discount_per&quot;: 0,&#xd;
+        &quot;pod_pkg_forward_per&quot;: 0,&#xd;
+        &quot;pod_shipto_add_phone&quot;: &quot;+916546546546&quot;,&#xd;
+        &quot;pod_item_id_item&quot;: &quot;ITEM000000000175&quot;,&#xd;
+        &quot;pod_qty&quot;: 200,&#xd;
+        &quot;pod_po_uom_unit&quot;: &quot;BAG&quot;,&#xd;
+        &quot;pod_stock_uom_unit&quot;: &quot;BAG&quot;,&#xd;
+        &quot;pod_item_code&quot;: &quot;ITEM88&quot;,&#xd;
+        &quot;pod_item_name&quot;: &quot;DARK MILK CHOCOLATE&quot;,&#xd;
+        &quot;l_pod_item_name&quot;: &quot;ITEM88 - DARK MILK CHOCOLATE&quot;,&#xd;
+        &quot;pod_ugst_per_taxm&quot;: 9,&#xd;
+        &quot;pod_cgst_per_taxm&quot;: 9,&#xd;
+        &quot;pod_sgst_per_taxm&quot;: 9,&#xd;
+        &quot;pod_igst_per_taxm&quot;: 18,&#xd;
+        &quot;pod_taxrate_taxm&quot;: &quot;TAXM000000000001&quot;,&#xd;
+        &quot;pod_tech_specs&quot;: &quot;&quot;,&#xd;
+        &quot;pod_shipto_add_state_stat&quot;: &quot;MH&quot;,&#xd;
+        &quot;pod_shipto_add_county_cntr&quot;: &quot;IN&quot;,&#xd;
+        &quot;l_inv_po_delivery_dtl&quot;: [&#xd;
+          {&#xd;
+            &quot;podd_id&quot;: &quot; &quot;,&#xd;
+            &quot;podd_po_dtl_id_pod&quot;: &quot; &quot;,&#xd;
+            &quot;podd_po_id_poh&quot;: &quot;&quot;,&#xd;
+            &quot;podd_delivery_qty&quot;: 200,&#xd;
+            &quot;podd_delivery_date&quot;: &quot;${Date}T18:30:00.000Z&quot;,&#xd;
+            &quot;podd_delivery_seq&quot;: 1,&#xd;
+            &quot;l_new_entry&quot;: true,&#xd;
+            &quot;l_auto_delivery&quot;: true&#xd;
+          }&#xd;
+        ],&#xd;
+        &quot;pod_net_rate&quot;: 20,&#xd;
+        &quot;pod_pkg_forwd_amout&quot;: 0,&#xd;
+        &quot;pod_gross_amount&quot;: 4000,&#xd;
+        &quot;pod_net_amount&quot;: 4720,&#xd;
+        &quot;pod_total_taxes&quot;: 720,&#xd;
+        &quot;pod_ugst_amount&quot;: 0,&#xd;
+        &quot;pod_cgst_amount&quot;: 360,&#xd;
+        &quot;pod_sgst_amount&quot;: 360,&#xd;
+        &quot;pod_igst_amount&quot;: 0,&#xd;
+        &quot;pod_rate&quot;: 20,&#xd;
+        &quot;pod_shipto_add_address&quot;: &quot;K-41/42, Butibori Industrial Area, Butibori&quot;,&#xd;
+        &quot;pod_shipto_add_city&quot;: &quot;NAGPUR&quot;,&#xd;
+        &quot;pod_shipto_add_name&quot;: &quot;Ankush&quot;,&#xd;
+        &quot;pod_shipto_add_zip&quot;: &quot;441122&quot;,&#xd;
+        &quot;pod_shipto_entity_code_ent&quot;: &quot;001001000000000000&quot;,&#xd;
+        &quot;pod_po_id_poh&quot;: &quot;&quot;,&#xd;
+        &quot;pod_po_rev&quot;: 0,&#xd;
+        &quot;pod_po_srno&quot;: 0,&#xd;
+        &quot;pod_free_qty&quot;: 0,&#xd;
+        &quot;pod_cess_per_taxm&quot;: 0,&#xd;
+        &quot;pod_surcharge_per_taxm&quot;: 0,&#xd;
+        &quot;pod_vat_per_taxm&quot;: 0,&#xd;
+        &quot;pod_tax1_per_taxm&quot;: 0,&#xd;
+        &quot;pod_tax2_per_taxm&quot;: 0,&#xd;
+        &quot;pod_tax3_per_taxm&quot;: 0,&#xd;
+        &quot;pod_cess_amount&quot;: 0,&#xd;
+        &quot;pod_surcharge_amount&quot;: 0,&#xd;
+        &quot;pod_vat_amount&quot;: 0,&#xd;
+        &quot;pod_tax1_amount&quot;: 0,&#xd;
+        &quot;pod_tax2_amount&quot;: 0,&#xd;
+        &quot;pod_tax3_amount&quot;: 0,&#xd;
+        &quot;pod_rec_qty&quot;: 0,&#xd;
+        &quot;pod_status&quot;: &quot;&quot;&#xd;
+      },&#xd;
+      &quot;l_Inv_Po_Indent_Dtl_List&quot;: [],&#xd;
+      &quot;l_Inv_Po_Quot_Dtl_List&quot;: [],&#xd;
+      &quot;l_Inv_Po_Delivery_Dtl_List&quot;: [&#xd;
+        {&#xd;
+          &quot;podd_id&quot;: &quot; &quot;,&#xd;
+          &quot;podd_po_dtl_id_pod&quot;: &quot;&quot;,&#xd;
+          &quot;podd_po_id_poh&quot;: &quot;&quot;,&#xd;
+          &quot;podd_delivery_qty&quot;: 200,&#xd;
+          &quot;podd_delivery_date&quot;: &quot;${Date}&quot;,&#xd;
+          &quot;podd_delivery_seq&quot;: 1,&#xd;
+          &quot;l_new_entry&quot;: true,&#xd;
+          &quot;l_auto_delivery&quot;: true,&#xd;
+          &quot;l_podd_po_dtl_id_pod&quot;: &quot;aN/undefined/NaN&quot;,&#xd;
+          &quot;l_podd_delivery_date&quot;: &quot;${Date1}&quot;&#xd;
+        }&#xd;
+      ]&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;l_Inv_Po_Payterms_Dtl_List&quot;: [&#xd;
+    {&#xd;
+      &quot;popt_payterm_id_gmst&quot;: &quot;GENM000000000059&quot;,&#xd;
+      &quot;popt_param_1&quot;: 0,&#xd;
+      &quot;popt_param_2&quot;: 1,&#xd;
+      &quot;gmst_description&quot;: &quot;Advance Payment X %&quot;,&#xd;
+      &quot;popt_po_id_poh&quot;: &quot;&quot;,&#xd;
+      &quot;popt_id&quot;: &quot;&quot;,&#xd;
+      &quot;popt_po_rev&quot;: 0,&#xd;
+      &quot;popt_srno&quot;: 0&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">InventoryService-1.0/inventory/ctrl/save_update_po</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Authorization" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex_PohID" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">PohID</stringProp>
+                <stringProp name="RegexExtractor.regex">&quot;l_id&quot;:&quot;(.+?)&quot;</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default"></stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GRN_Get PO Detail_${UserId}" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;l_department&quot;:&quot;DEPT000000000001&quot;,&quot;l_entitycode&quot;:&quot;001001000000000000&quot;,&quot;l_fy_id&quot;:&quot;FINM000000000003&quot;,&quot;l_userid&quot;:&quot;USER000000000001&quot;,&quot;l_unique_id&quot;:&quot;${PohID}&quot;,&quot;l_inventory_type&quot;:&quot;1,2&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">InventoryService-1.0/inventory/ctrl/get_grn_po</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Authorization" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex_PodID" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">PodID</stringProp>
+                <stringProp name="RegexExtractor.regex">&quot;pod_id&quot;:&quot;(.+?)&quot;</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default"></stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex_Poh_ID" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">Poh_ID</stringProp>
+                <stringProp name="RegexExtractor.regex">&quot;pod_id&quot;:&quot;(.+?)&quot;</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default"></stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex_PoNo" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">Po_Number</stringProp>
+                <stringProp name="RegexExtractor.regex">&quot;poh_po_no&quot;:&quot;(.+?)&quot;</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default"></stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GRN_Create GRN_${UserId}" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+  &quot;l_Inv_Grn_Addon_Dtl_List&quot;: [],&#xd;
+  &quot;l_Inv_Grn_Dtl_List&quot;: [&#xd;
+    {&#xd;
+      &quot;l_batch_list&quot;: [&#xd;
+        {&#xd;
+          &quot;code&quot;: &quot;Batch&quot;,&#xd;
+          &quot;name&quot;: &quot;Batch&quot;&#xd;
+        }&#xd;
+      ],&#xd;
+      &quot;ingd_srno&quot;: &quot;0&quot;,&#xd;
+      &quot;ingd_po_id_pod&quot;: &quot;${PodID}&quot;,&#xd;
+      &quot;ingd_item_id_item&quot;: &quot;ITEM000000000175&quot;,&#xd;
+      &quot;ingd_item_code&quot;: &quot;ITEM88&quot;,&#xd;
+      &quot;ingd_item_name&quot;: &quot;DARK MILK CHOCOLATE&quot;,&#xd;
+      &quot;ingd_batlot_flag&quot;: &quot;BATCH&quot;,&#xd;
+      &quot;ingd_recd_qty&quot;: 200,&#xd;
+      &quot;ingd_rate&quot;: 20,&#xd;
+      &quot;ingd_po_uom_unit&quot;: &quot;BAG&quot;,&#xd;
+      &quot;ingd_taxrate_taxm&quot;: &quot;TAXM000000000001&quot;,&#xd;
+      &quot;ingd_igst_per_taxm&quot;: 18,&#xd;
+      &quot;ingd_cgst_per_taxm&quot;: 9,&#xd;
+      &quot;ingd_sgst_per_taxm&quot;: 9,&#xd;
+      &quot;ingd_ugst_per_taxm&quot;: 9,&#xd;
+      &quot;ingd_cess_per_taxm&quot;: 0,&#xd;
+      &quot;ingd_surcharge_per_taxm&quot;: 0,&#xd;
+      &quot;ingd_vat_per_taxm&quot;: 0,&#xd;
+      &quot;ingd_tax1_per_taxm&quot;: 0,&#xd;
+      &quot;ingd_tax2_per_taxm&quot;: 0,&#xd;
+      &quot;ingd_tax3_per_taxm&quot;: 0,&#xd;
+      &quot;ingd_store_sub_loc_stor&quot;: &quot;STOR000000000001&quot;,&#xd;
+      &quot;l_ingd_store_sub_loc_stor_name&quot;: &quot;Main Store&quot;,&#xd;
+      &quot;ingd_hsncode&quot;: &quot;00000001&quot;,&#xd;
+      &quot;ingd_store_ent&quot;: &quot;001001001000000000&quot;,&#xd;
+      &quot;ingd_insp&quot;: &quot;N&quot;,&#xd;
+      &quot;l_ingd_insp&quot;: &quot;No&quot;,&#xd;
+      &quot;l_pod_qty&quot;: 200,&#xd;
+      &quot;l_pod_item_tolerance&quot;: 0,&#xd;
+      &quot;l_minimum_tolerance_value&quot;: 200,&#xd;
+      &quot;l_maximum_tolerance_value&quot;: 200,&#xd;
+      &quot;ingd_accepted_qty&quot;: 200,&#xd;
+      &quot;ingd_rejected_qty&quot;: 0,&#xd;
+      &quot;ingd_stock_uom_unit&quot;: &quot;BAG&quot;,&#xd;
+      &quot;ignd_conversion_factor&quot;: 1,&#xd;
+      &quot;ingd_cgst_amount&quot;: 360,&#xd;
+      &quot;ingd_sgst_amount&quot;: 360,&#xd;
+      &quot;ingd_ugst_amount&quot;: 0,&#xd;
+      &quot;ingd_cess_amount&quot;: 0,&#xd;
+      &quot;ingd_surcharge_amount&quot;: 0,&#xd;
+      &quot;ingd_vat_amount&quot;: 0,&#xd;
+      &quot;ingd_tax1_amount&quot;: 0,&#xd;
+      &quot;ingd_tax2_amount&quot;: 0,&#xd;
+      &quot;ingd_tax3_amount&quot;: 0,&#xd;
+      &quot;l_pod_discount_per&quot;: 0,&#xd;
+      &quot;l_pod_pkg_forwd_amout&quot;: 0,&#xd;
+      &quot;l_item_stock_uom_unit&quot;: &quot;BAG&quot;,&#xd;
+      &quot;l_item_stock_suom_unit&quot;: &quot;BAG&quot;,&#xd;
+      &quot;l_item_stock_uom_conv&quot;: 1,&#xd;
+      &quot;l_item_property_1&quot;: &quot;NO&quot;,&#xd;
+      &quot;l_item_property_2&quot;: &quot;NO&quot;,&#xd;
+      &quot;l_item_property_3&quot;: &quot;NO&quot;,&#xd;
+      &quot;l_item_conv_formula&quot;: &quot;C&quot;,&#xd;
+      &quot;l_item_isbatchlot&quot;: &quot;BATCH&quot;,&#xd;
+      &quot;ingd_gross_amount&quot;: 4000,&#xd;
+      &quot;ingd_net_amount&quot;: 4720,&#xd;
+      &quot;ingd_igst_amount&quot;: 0,&#xd;
+      &quot;ingd_landed_rate&quot;: 23.6,&#xd;
+      &quot;ingd_discount_amount&quot;: 0,&#xd;
+      &quot;l_ingh_tax_amout_total&quot;: 720,&#xd;
+      &quot;ingd_total_taxes&quot;: 18,&#xd;
+      &quot;ingd_batch&quot;: &quot;Batch&quot;,&#xd;
+      &quot;ingd_expiry&quot;: &quot;2024-08-31&quot;,&#xd;
+      &quot;ingd_inv_qty&quot;: 200,&#xd;
+      &quot;ingd_remarks&quot;: &quot;Test&quot;,&#xd;
+      &quot;l_ingd_expiry_display&quot;: &quot;31/Aug/2024&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;l_Inv_Grn_Hdr_Model&quot;: {&#xd;
+    &quot;ingh_wf_doctype_dtyp&quot;: &quot;DT0026&quot;,&#xd;
+    &quot;ingh_currency_curr&quot;: &quot;INR&quot;,&#xd;
+    &quot;ingh_exchange_rate&quot;: 1,&#xd;
+    &quot;ingh_doc_dt&quot;: &quot;${Date}&quot;,&#xd;
+    &quot;ingh_wf_tag1_code&quot;: &quot;01&quot;,&#xd;
+    &quot;ingh_wf_tag2_code&quot;: &quot;02&quot;,&#xd;
+    &quot;ingh_wf_series_serm&quot;: &quot;GRN&quot;,&#xd;
+    &quot;l_grnpoh_po_no&quot;: &quot;${Po_Number}&quot;,&#xd;
+    &quot;ingh_party_name&quot;: &quot;BBC PARTY&quot;,&#xd;
+    &quot;ingh_transporter_name&quot;: &quot;NA&quot;,&#xd;
+    &quot;ingh_trade_name&quot;: &quot;BBC PARTY&quot;,&#xd;
+    &quot;ingh_party_code&quot;: &quot;BBC001&quot;,&#xd;
+    &quot;l_party_country_code&quot;: &quot;IN&quot;,&#xd;
+    &quot;l_party_state_code&quot;: &quot;MH&quot;,&#xd;
+    &quot;ingh_party_acnt&quot;: &quot;CUST000000000399&quot;,&#xd;
+    &quot;ingh_po_id_poh&quot;: &quot;${Poh_ID}&quot;,&#xd;
+    &quot;l_acnt_tcs_applicable&quot;: false,&#xd;
+    &quot;ingh_challan_no&quot;: &quot;01&quot;,&#xd;
+    &quot;ingh_challan_dt&quot;: &quot;${Date}&quot;,&#xd;
+    &quot;ingh_transport_mode&quot;: &quot;L&quot;,&#xd;
+    &quot;ingh_lr_no&quot;: &quot;0101&quot;,&#xd;
+    &quot;ingh_lr_date&quot;: &quot;${Date}&quot;,&#xd;
+    &quot;ingh_invoice_no&quot;: &quot;0101&quot;,&#xd;
+    &quot;ingh_invoice_dt&quot;: &quot;${Date}&quot;,&#xd;
+    &quot;ingh_tcs_percent&quot;: 0,&#xd;
+    &quot;ingh_gross_amount_total&quot;: 4000,&#xd;
+    &quot;ingh_discount_amount_total&quot;: 0,&#xd;
+    &quot;ingh_net_amount_total&quot;: 4720,&#xd;
+    &quot;ingh_tax_amout_total&quot;: 720,&#xd;
+    &quot;ingh_tcs_amount&quot;: 0,&#xd;
+    &quot;ingh_net_amount_curr&quot;: 4720,&#xd;
+    &quot;ingh_round_off_value&quot;: 0,&#xd;
+    &quot;l_net_round_off_value&quot;: 4720,&#xd;
+    &quot;ingh_invoice_value&quot;: 4720,&#xd;
+    &quot;ingh_trn_type&quot;: &quot;G&quot;,&#xd;
+    &quot;ingh_gateentry_dt&quot;: &quot; &quot;,&#xd;
+    &quot;ingh_addon_amount_total&quot;: 0,&#xd;
+    &quot;ingh_gateentry_no&quot;: &quot; &quot;,&#xd;
+    &quot;ingh_isdraft&quot;: &quot;NO&quot;,&#xd;
+    &quot;ingh_isworkflowapproved&quot;: &quot;YES&quot;,&#xd;
+    &quot;ingh_entity_code_ent&quot;: &quot;001001000000000000&quot;,&#xd;
+    &quot;ingh_fy_display_desc&quot;: &quot;2024-25&quot;,&#xd;
+    &quot;ingh_fy_id_fyrm&quot;: &quot;FINM000000000003&quot;&#xd;
+  }&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">InventoryService-1.0/inventory/ctrl/save_grn</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Authorization" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GRN_Login Validate_${UserId}" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">AdminService-1.0/admin/ctrl/token_validate</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GRN_Logout_${UserId}" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;gmd_LoginId&quot;:&quot;${UserId}&quot;,&quot;gmd_refreshkey&quot;:&quot;K1XuAbsi0mZkp5oet8PpyG4pk4A&quot;,&quot;gmd_tokenkey&quot;:&quot;${Token}&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">AdminService-1.0/admin/ctrl/all_logout</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="WRN Creation_100 Users" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.num_threads">100</stringProp>
+        <stringProp name="Threads initial delay">0</stringProp>
+        <stringProp name="Start users count">1</stringProp>
+        <stringProp name="Start users count burst">0</stringProp>
+        <stringProp name="Start users period">30</stringProp>
+        <stringProp name="Stop users count">5</stringProp>
+        <stringProp name="Stop users period">1</stringProp>
+        <stringProp name="flighttime">60</stringProp>
+        <stringProp name="rampUp">5</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+      </kg.apc.jmeter.threads.SteppingThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Login_WRN_Logout" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="WRN_Login_${UserId}" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;gmd_LoginId&quot;:&quot;system&quot;,&quot;gmd_Password&quot;:&quot;W7qT9oD+/2+UinUzuVW60w==&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">AdminService-1.0/admin/ctrl/all_login</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex_Token" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">Token</stringProp>
+              <stringProp name="RegexExtractor.regex">&quot;l_token&quot;:&quot;(.+?)&quot;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="User_CSV" enabled="true">
+              <stringProp name="filename">C:/Users/HP/Desktop/DMS_ Load _Testing/New/GRN_user.csv</stringProp>
+              <stringProp name="fileEncoding"></stringProp>
+              <stringProp name="variableNames">UserId,Password</stringProp>
+              <boolProp name="ignoreFirstLine">true</boolProp>
+              <stringProp name="delimiter">,</stringProp>
+              <boolProp name="quotedData">false</boolProp>
+              <boolProp name="recycle">true</boolProp>
+              <boolProp name="stopThread">false</boolProp>
+              <stringProp name="shareMode">shareMode.all</stringProp>
+            </CSVDataSet>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="WRN_Login Validate_${UserId}" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">AdminService-1.0/admin/ctrl/token_validate</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">50</stringProp>
+          </LoopController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="WRN_Create Direct PO_${UserId}" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+  &quot;l_Inv_Po_Hdr_Model&quot;: {&#xd;
+    &quot;poh_po_no&quot;: &quot;&quot;,&#xd;
+    &quot;poh_po_id&quot;: &quot;&quot;,&#xd;
+    &quot;poh_wf_series_serm&quot;: &quot;POD&quot;,&#xd;
+    &quot;poh_enquiry_id_ineh&quot;: &quot; &quot;,&#xd;
+    &quot;poh_quoh_id_quoh&quot;: &quot; &quot;,&#xd;
+    &quot;poh_shipto_type&quot;: &quot;S&quot;,&#xd;
+    &quot;poh_exchange_rate&quot;: 1,&#xd;
+    &quot;poh_remarks&quot;: &quot; &quot;,&#xd;
+    &quot;poh_entity_code_ent&quot;: &quot;001001000000000000&quot;,&#xd;
+    &quot;poh_currrency_curr&quot;: &quot;INR&quot;,&#xd;
+    &quot;poh_po_dt&quot;: &quot;${Date}&quot;,&#xd;
+    &quot;poh_from_dt&quot;: &quot;${Date}&quot;,&#xd;
+    &quot;poh_wf_doctype_dtyp&quot;: &quot;DT0021&quot;,&#xd;
+    &quot;poh_fy_id_fyrm&quot;: &quot;FINM000000000003&quot;,&#xd;
+    &quot;poh_fy_display_desc&quot;: &quot;2024-25&quot;,&#xd;
+    &quot;poh_billto_entity_code_ent&quot;: &quot;001001000000000000&quot;,&#xd;
+    &quot;poh_billing_add_name&quot;: &quot;Ankush&quot;,&#xd;
+    &quot;poh_billing_add_address&quot;: &quot;K-41/42, Butibori Industrial Area, Butibori&quot;,&#xd;
+    &quot;poh_billing_add_city&quot;: &quot;NAGPUR&quot;,&#xd;
+    &quot;poh_billing_add_county_cntr&quot;: &quot;IN&quot;,&#xd;
+    &quot;poh_billing_add_state_stat&quot;: &quot;MH&quot;,&#xd;
+    &quot;poh_billing_add_zip&quot;: &quot;441122&quot;,&#xd;
+    &quot;poh_billing_add_phone&quot;: &quot;+916546546546&quot;,&#xd;
+    &quot;poh_shipto_entity_code_ent&quot;: &quot;001001000000000000&quot;,&#xd;
+    &quot;poh_shipto_add_name&quot;: &quot;Ankush&quot;,&#xd;
+    &quot;poh_shipto_add_address&quot;: &quot;K-41/42, Butibori Industrial Area, Butibori&quot;,&#xd;
+    &quot;poh_shipto_add_city&quot;: &quot;NAGPUR&quot;,&#xd;
+    &quot;poh_shipto_add_county_cntr&quot;: &quot;IN&quot;,&#xd;
+    &quot;poh_shipto_add_state_stat&quot;: &quot;MH&quot;,&#xd;
+    &quot;poh_shipto_add_zip&quot;: &quot;441122&quot;,&#xd;
+    &quot;poh_shipto_add_phone&quot;: &quot;+916546546546&quot;,&#xd;
+    &quot;poh_desp_mode_gmst&quot;: &quot;GENM000000000076&quot;,&#xd;
+    &quot;poh_to_dt&quot;: &quot;2024-05-20&quot;,&#xd;
+    &quot;poh_wf_tag1_code&quot;: &quot;01&quot;,&#xd;
+    &quot;poh_wf_tag2_code&quot;: &quot;02&quot;,&#xd;
+    &quot;poh_party_code&quot;: &quot;BBC001&quot;,&#xd;
+    &quot;poh_party_name&quot;: &quot;BBC PARTY&quot;,&#xd;
+    &quot;poh_party_add_phone&quot;: &quot;+918924264638&quot;,&#xd;
+    &quot;poh_party_id_acnt&quot;: &quot;CUST000000000399&quot;,&#xd;
+    &quot;poh_tcs_tax&quot;: &quot;CUST000000000031&quot;,&#xd;
+    &quot;poh_tcs_percent&quot;: 1.2,&#xd;
+    &quot;poh_tcs_amount&quot;: 56.64,&#xd;
+    &quot;poh_tax_amount_total&quot;: 720,&#xd;
+    &quot;poh_net_amount_total&quot;: 4776.64,&#xd;
+    &quot;poh_net_amount_curr&quot;: 4776.64,&#xd;
+    &quot;poh_round_off_value&quot;: 0.36,&#xd;
+    &quot;poh_party_add_name&quot;: &quot;Shreyash S&quot;,&#xd;
+    &quot;poh_party_add_address&quot;: &quot;nagpur&quot;,&#xd;
+    &quot;poh_party_add_city&quot;: &quot;Nagpur&quot;,&#xd;
+    &quot;poh_party_add_county_cntr&quot;: &quot;IN&quot;,&#xd;
+    &quot;poh_party_add_state_stat&quot;: &quot;MH&quot;,&#xd;
+    &quot;poh_party_add_zip&quot;: &quot;444001&quot;,&#xd;
+    &quot;poh_credit_days&quot;: 12,&#xd;
+    &quot;poh_delivery_dt&quot;: &quot;${Date}&quot;,&#xd;
+    &quot;poh_delivery_at&quot;: &quot;Nagpur&quot;,&#xd;
+    &quot;poh_delivery_point&quot;: &quot;Nagpur&quot;,&#xd;
+    &quot;poh_pref_transporter&quot;: &quot;NA&quot;,&#xd;
+    &quot;poh_terms_and_conditions&quot;: &quot;GENM000000000073&quot;,&#xd;
+    &quot;poh_gross_amout_total&quot;: 4000,&#xd;
+    &quot;poh_isdraft&quot;: &quot;NO&quot;,&#xd;
+    &quot;poh_isworkflowapproved&quot;: &quot;YES&quot;,&#xd;
+    &quot;l_poh_po_dt&quot;: &quot;${Date1}&quot;,&#xd;
+    &quot;l_poh_from_dt&quot;: &quot;${Date1}&quot;,&#xd;
+    &quot;l_poh_to_dt&quot;: &quot;20/May/2024&quot;,&#xd;
+    &quot;l_poh_delivery_dt&quot;: &quot;${Date1}&quot;,&#xd;
+    &quot;poh_po_rev&quot;: 0,&#xd;
+    &quot;poh_po_parent&quot;: &quot; &quot;,&#xd;
+    &quot;poh_is_closed&quot;: &quot;NO&quot;&#xd;
+  },&#xd;
+  &quot;l_Inv_Po_Dtl_Line_Model&quot;: [&#xd;
+    {&#xd;
+      &quot;l_Inv_Po_Dtl_Model&quot;: {&#xd;
+        &quot;pod_id&quot;: &quot;&quot;,&#xd;
+        &quot;l_new_entry&quot;: true,&#xd;
+        &quot;pod_item_tolerance&quot;: 0,&#xd;
+        &quot;pod_discount_per&quot;: 0,&#xd;
+        &quot;pod_pkg_forward_per&quot;: 0,&#xd;
+        &quot;pod_shipto_add_phone&quot;: &quot;+916546546546&quot;,&#xd;
+        &quot;pod_item_id_item&quot;: &quot;ITEM000000000182&quot;,&#xd;
+        &quot;pod_qty&quot;: 200,&#xd;
+        &quot;pod_po_uom_unit&quot;: &quot;NOS&quot;,&#xd;
+        &quot;pod_stock_uom_unit&quot;: &quot;NOS&quot;,&#xd;
+        &quot;pod_item_code&quot;: &quot;ITEM987&quot;,&#xd;
+        &quot;pod_item_name&quot;: &quot;KESAR ICECREAM&quot;,&#xd;
+        &quot;l_pod_item_name&quot;: &quot;ITEM987 - KESAR ICECREAM&quot;,&#xd;
+        &quot;pod_ugst_per_taxm&quot;: 9,&#xd;
+        &quot;pod_cgst_per_taxm&quot;: 9,&#xd;
+        &quot;pod_sgst_per_taxm&quot;: 9,&#xd;
+        &quot;pod_igst_per_taxm&quot;: 18,&#xd;
+        &quot;pod_taxrate_taxm&quot;: &quot;TAXM000000000001&quot;,&#xd;
+        &quot;pod_tech_specs&quot;: &quot;&quot;,&#xd;
+        &quot;pod_shipto_add_state_stat&quot;: &quot;MH&quot;,&#xd;
+        &quot;pod_shipto_add_county_cntr&quot;: &quot;IN&quot;,&#xd;
+        &quot;l_inv_po_delivery_dtl&quot;: [&#xd;
+          {&#xd;
+            &quot;podd_id&quot;: &quot; &quot;,&#xd;
+            &quot;podd_po_dtl_id_pod&quot;: &quot; &quot;,&#xd;
+            &quot;podd_po_id_poh&quot;: &quot;&quot;,&#xd;
+            &quot;podd_delivery_qty&quot;: 200,&#xd;
+            &quot;podd_delivery_date&quot;: &quot;${Date}T18:30:00.000Z&quot;,&#xd;
+            &quot;podd_delivery_seq&quot;: 1,&#xd;
+            &quot;l_new_entry&quot;: true,&#xd;
+            &quot;l_auto_delivery&quot;: true&#xd;
+          }&#xd;
+        ],&#xd;
+        &quot;pod_net_rate&quot;: 20,&#xd;
+        &quot;pod_pkg_forwd_amout&quot;: 0,&#xd;
+        &quot;pod_gross_amount&quot;: 4000,&#xd;
+        &quot;pod_net_amount&quot;: 4720,&#xd;
+        &quot;pod_total_taxes&quot;: 720,&#xd;
+        &quot;pod_ugst_amount&quot;: 0,&#xd;
+        &quot;pod_cgst_amount&quot;: 360,&#xd;
+        &quot;pod_sgst_amount&quot;: 360,&#xd;
+        &quot;pod_igst_amount&quot;: 0,&#xd;
+        &quot;pod_rate&quot;: 20,&#xd;
+        &quot;pod_shipto_add_address&quot;: &quot;K-41/42, Butibori Industrial Area, Butibori&quot;,&#xd;
+        &quot;pod_shipto_add_city&quot;: &quot;NAGPUR&quot;,&#xd;
+        &quot;pod_shipto_add_name&quot;: &quot;Ankush&quot;,&#xd;
+        &quot;pod_shipto_add_zip&quot;: &quot;441122&quot;,&#xd;
+        &quot;pod_shipto_entity_code_ent&quot;: &quot;001001000000000000&quot;,&#xd;
+        &quot;pod_po_id_poh&quot;: &quot;&quot;,&#xd;
+        &quot;pod_po_rev&quot;: 0,&#xd;
+        &quot;pod_po_srno&quot;: 0,&#xd;
+        &quot;pod_free_qty&quot;: 0,&#xd;
+        &quot;pod_cess_per_taxm&quot;: 0,&#xd;
+        &quot;pod_surcharge_per_taxm&quot;: 0,&#xd;
+        &quot;pod_vat_per_taxm&quot;: 0,&#xd;
+        &quot;pod_tax1_per_taxm&quot;: 0,&#xd;
+        &quot;pod_tax2_per_taxm&quot;: 0,&#xd;
+        &quot;pod_tax3_per_taxm&quot;: 0,&#xd;
+        &quot;pod_cess_amount&quot;: 0,&#xd;
+        &quot;pod_surcharge_amount&quot;: 0,&#xd;
+        &quot;pod_vat_amount&quot;: 0,&#xd;
+        &quot;pod_tax1_amount&quot;: 0,&#xd;
+        &quot;pod_tax2_amount&quot;: 0,&#xd;
+        &quot;pod_tax3_amount&quot;: 0,&#xd;
+        &quot;pod_rec_qty&quot;: 0,&#xd;
+        &quot;pod_status&quot;: &quot;&quot;&#xd;
+      },&#xd;
+      &quot;l_Inv_Po_Indent_Dtl_List&quot;: [],&#xd;
+      &quot;l_Inv_Po_Quot_Dtl_List&quot;: [],&#xd;
+      &quot;l_Inv_Po_Delivery_Dtl_List&quot;: [&#xd;
+        {&#xd;
+          &quot;podd_id&quot;: &quot; &quot;,&#xd;
+          &quot;podd_po_dtl_id_pod&quot;: &quot;&quot;,&#xd;
+          &quot;podd_po_id_poh&quot;: &quot;&quot;,&#xd;
+          &quot;podd_delivery_qty&quot;: 200,&#xd;
+          &quot;podd_delivery_date&quot;: &quot;${Date}&quot;,&#xd;
+          &quot;podd_delivery_seq&quot;: 1,&#xd;
+          &quot;l_new_entry&quot;: true,&#xd;
+          &quot;l_auto_delivery&quot;: true,&#xd;
+          &quot;l_podd_po_dtl_id_pod&quot;: &quot;aN/undefined/NaN&quot;,&#xd;
+          &quot;l_podd_delivery_date&quot;: &quot;${Date1}&quot;&#xd;
+        }&#xd;
+      ]&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;l_Inv_Po_Payterms_Dtl_List&quot;: [&#xd;
+    {&#xd;
+      &quot;popt_payterm_id_gmst&quot;: &quot;GENM000000000059&quot;,&#xd;
+      &quot;popt_param_1&quot;: 1,&#xd;
+      &quot;popt_param_2&quot;: 0,&#xd;
+      &quot;gmst_description&quot;: &quot;Advance Payment X %&quot;,&#xd;
+      &quot;popt_po_id_poh&quot;: &quot;&quot;,&#xd;
+      &quot;popt_id&quot;: &quot;&quot;,&#xd;
+      &quot;popt_po_rev&quot;: 0,&#xd;
+      &quot;popt_srno&quot;: 0&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">InventoryService-1.0/inventory/ctrl/save_update_po</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Authorization" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex_PohID" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">PohID</stringProp>
+                <stringProp name="RegexExtractor.regex">&quot;l_id&quot;:&quot;(.+?)&quot;</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default"></stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="WRN_Get PO Detail_${UserId}" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;l_department&quot;:&quot;DEPT000000000001&quot;,&quot;l_entitycode&quot;:&quot;001001000000000000&quot;,&quot;l_fy_id&quot;:&quot;FINM000000000003&quot;,&quot;l_userid&quot;:&quot;USER000000000001&quot;,&quot;l_unique_id&quot;:&quot;${PohID}&quot;,&quot;l_inventory_type&quot;:&quot;4&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">InventoryService-1.0/inventory/ctrl/get_grn_po</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Authorization" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex_PodID" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">PodID</stringProp>
+                <stringProp name="RegexExtractor.regex">&quot;pod_id&quot;:&quot;(.+?)&quot;</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default"></stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex_PoNo" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">Po_Number</stringProp>
+                <stringProp name="RegexExtractor.regex">&quot;poh_po_no&quot;:&quot;(.+?)&quot;</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default"></stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex_Poh_ID" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">Poh_ID</stringProp>
+                <stringProp name="RegexExtractor.regex">&quot;pod_id&quot;:&quot;(.+?)&quot;</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default"></stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="WRN_Create WRN_${UserId}" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+  &quot;l_Inv_Grn_Addon_Dtl_List&quot;: [],&#xd;
+  &quot;l_Inv_Grn_Dtl_List&quot;: [&#xd;
+    {&#xd;
+      &quot;l_batch_list&quot;: [&#xd;
+        {&#xd;
+          &quot;code&quot;: &quot;Batch&quot;,&#xd;
+          &quot;name&quot;: &quot;Batch&quot;&#xd;
+        }&#xd;
+      ],&#xd;
+      &quot;ingd_srno&quot;: &quot;0&quot;,&#xd;
+      &quot;ingd_po_id_pod&quot;: &quot;${PodID}&quot;,&#xd;
+      &quot;ingd_item_id_item&quot;: &quot;ITEM000000000182&quot;,&#xd;
+      &quot;ingd_item_code&quot;: &quot;ITEM987&quot;,&#xd;
+      &quot;ingd_item_name&quot;: &quot;KESAR ICECREAM&quot;,&#xd;
+      &quot;ingd_batlot_flag&quot;: &quot;BATCH&quot;,&#xd;
+      &quot;ingd_recd_qty&quot;: 200,&#xd;
+      &quot;ingd_rate&quot;: 20,&#xd;
+      &quot;ingd_po_uom_unit&quot;: &quot;NOS&quot;,&#xd;
+      &quot;ingd_taxrate_taxm&quot;: &quot;TAXM000000000001&quot;,&#xd;
+      &quot;ingd_igst_per_taxm&quot;: 18,&#xd;
+      &quot;ingd_cgst_per_taxm&quot;: 9,&#xd;
+      &quot;ingd_sgst_per_taxm&quot;: 9,&#xd;
+      &quot;ingd_ugst_per_taxm&quot;: 9,&#xd;
+      &quot;ingd_cess_per_taxm&quot;: 0,&#xd;
+      &quot;ingd_surcharge_per_taxm&quot;: 0,&#xd;
+      &quot;ingd_vat_per_taxm&quot;: 0,&#xd;
+      &quot;ingd_tax1_per_taxm&quot;: 0,&#xd;
+      &quot;ingd_tax2_per_taxm&quot;: 0,&#xd;
+      &quot;ingd_tax3_per_taxm&quot;: 0,&#xd;
+      &quot;ingd_store_sub_loc_stor&quot;: &quot;&quot;,&#xd;
+      &quot;l_ingd_store_sub_loc_stor_name&quot;: null,&#xd;
+      &quot;ingd_hsncode&quot;: &quot;00000001&quot;,&#xd;
+      &quot;ingd_store_ent&quot;: &quot;001001001000000000&quot;,&#xd;
+      &quot;ingd_insp&quot;: &quot;N&quot;,&#xd;
+      &quot;l_ingd_insp&quot;: &quot;No&quot;,&#xd;
+      &quot;l_pod_qty&quot;: 200,&#xd;
+      &quot;l_pod_item_tolerance&quot;: 0,&#xd;
+      &quot;l_minimum_tolerance_value&quot;: 200,&#xd;
+      &quot;l_maximum_tolerance_value&quot;: 200,&#xd;
+      &quot;ingd_accepted_qty&quot;: 200,&#xd;
+      &quot;ingd_rejected_qty&quot;: 0,&#xd;
+      &quot;ingd_stock_uom_unit&quot;: &quot;NOS&quot;,&#xd;
+      &quot;ignd_conversion_factor&quot;: 1,&#xd;
+      &quot;ingd_cgst_amount&quot;: 360,&#xd;
+      &quot;ingd_sgst_amount&quot;: 360,&#xd;
+      &quot;ingd_ugst_amount&quot;: 0,&#xd;
+      &quot;ingd_cess_amount&quot;: 0,&#xd;
+      &quot;ingd_surcharge_amount&quot;: 0,&#xd;
+      &quot;ingd_vat_amount&quot;: 0,&#xd;
+      &quot;ingd_tax1_amount&quot;: 0,&#xd;
+      &quot;ingd_tax2_amount&quot;: 0,&#xd;
+      &quot;ingd_tax3_amount&quot;: 0,&#xd;
+      &quot;l_pod_discount_per&quot;: 0,&#xd;
+      &quot;l_pod_pkg_forwd_amout&quot;: 0,&#xd;
+      &quot;l_item_stock_uom_unit&quot;: &quot;NOS&quot;,&#xd;
+      &quot;l_item_stock_suom_unit&quot;: &quot;NOS&quot;,&#xd;
+      &quot;l_item_stock_uom_conv&quot;: 1,&#xd;
+      &quot;l_item_property_1&quot;: &quot;NO&quot;,&#xd;
+      &quot;l_item_property_2&quot;: &quot;NO&quot;,&#xd;
+      &quot;l_item_property_3&quot;: &quot;NO&quot;,&#xd;
+      &quot;l_item_conv_formula&quot;: &quot;C&quot;,&#xd;
+      &quot;l_item_isbatchlot&quot;: &quot;BATCH&quot;,&#xd;
+      &quot;ingd_gross_amount&quot;: 4000,&#xd;
+      &quot;ingd_net_amount&quot;: 4720,&#xd;
+      &quot;ingd_igst_amount&quot;: 0,&#xd;
+      &quot;ingd_landed_rate&quot;: 23.6,&#xd;
+      &quot;ingd_discount_amount&quot;: 0,&#xd;
+      &quot;l_ingh_tax_amout_total&quot;: 720,&#xd;
+      &quot;ingd_total_taxes&quot;: 18,&#xd;
+      &quot;ingd_batch&quot;: &quot;Batch&quot;,&#xd;
+      &quot;ingd_expiry&quot;: &quot;2024-08-31&quot;,&#xd;
+      &quot;ingd_inv_qty&quot;: 200,&#xd;
+      &quot;ingd_remarks&quot;: &quot;Test&quot;,&#xd;
+      &quot;l_ingd_expiry_display&quot;: &quot;31/Aug/2024&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;l_Inv_Grn_Hdr_Model&quot;: {&#xd;
+    &quot;ingh_wf_doctype_dtyp&quot;: &quot;DT0060&quot;,&#xd;
+    &quot;ingh_currency_curr&quot;: &quot;INR&quot;,&#xd;
+    &quot;ingh_exchange_rate&quot;: 1,&#xd;
+    &quot;ingh_doc_dt&quot;: &quot;2024-04-20&quot;,&#xd;
+    &quot;ingh_wf_series_serm&quot;: &quot;WRN&quot;,&#xd;
+    &quot;ingh_wf_tag1_code&quot;: &quot; &quot;,&#xd;
+    &quot;ingh_wf_tag2_code&quot;: &quot; &quot;,&#xd;
+    &quot;l_grnpoh_po_no&quot;: &quot;${Po_Number}&quot;,&#xd;
+    &quot;ingh_party_name&quot;: &quot;BBC PARTY&quot;,&#xd;
+    &quot;ingh_transporter_name&quot;: &quot;NA&quot;,&#xd;
+    &quot;ingh_trade_name&quot;: &quot;BBC PARTY&quot;,&#xd;
+    &quot;ingh_party_code&quot;: &quot;BBC001&quot;,&#xd;
+    &quot;l_party_country_code&quot;: &quot;IN&quot;,&#xd;
+    &quot;l_party_state_code&quot;: &quot;MH&quot;,&#xd;
+    &quot;ingh_party_acnt&quot;: &quot;CUST000000000399&quot;,&#xd;
+    &quot;ingh_po_id_poh&quot;: &quot;${Poh_ID}&quot;,&#xd;
+    &quot;l_acnt_tcs_applicable&quot;: false,&#xd;
+    &quot;ingh_challan_no&quot;: &quot;01&quot;,&#xd;
+    &quot;ingh_challan_dt&quot;: &quot;${Date}&quot;,&#xd;
+    &quot;ingh_transport_mode&quot;: &quot;L&quot;,&#xd;
+    &quot;ingh_lr_no&quot;: &quot;0101&quot;,&#xd;
+    &quot;ingh_lr_date&quot;: &quot;${Date}&quot;,&#xd;
+    &quot;ingh_invoice_no&quot;: &quot;0101&quot;,&#xd;
+    &quot;ingh_invoice_dt&quot;: &quot;${Date}&quot;,&#xd;
+    &quot;ingh_tcs_percent&quot;: 0,&#xd;
+    &quot;ingh_gross_amount_total&quot;: 4000,&#xd;
+    &quot;ingh_discount_amount_total&quot;: 0,&#xd;
+    &quot;ingh_net_amount_total&quot;: 4720,&#xd;
+    &quot;ingh_tax_amout_total&quot;: 720,&#xd;
+    &quot;ingh_tcs_amount&quot;: 0,&#xd;
+    &quot;ingh_net_amount_curr&quot;: 4720,&#xd;
+    &quot;ingh_round_off_value&quot;: 0,&#xd;
+    &quot;l_net_round_off_value&quot;: 4720,&#xd;
+    &quot;ingh_invoice_value&quot;: 4720,&#xd;
+    &quot;ingh_trn_type&quot;: &quot;S&quot;,&#xd;
+    &quot;ingh_gateentry_dt&quot;: &quot; &quot;,&#xd;
+    &quot;ingh_addon_amount_total&quot;: 0,&#xd;
+    &quot;ingh_gateentry_no&quot;: &quot; &quot;,&#xd;
+    &quot;ingh_isdraft&quot;: &quot;NO&quot;,&#xd;
+    &quot;ingh_isworkflowapproved&quot;: &quot;YES&quot;,&#xd;
+    &quot;ingh_entity_code_ent&quot;: &quot;001001000000000000&quot;,&#xd;
+    &quot;ingh_fy_display_desc&quot;: &quot;2024-25&quot;,&#xd;
+    &quot;ingh_fy_id_fyrm&quot;: &quot;FINM000000000003&quot;&#xd;
+  }&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">InventoryService-1.0/inventory/ctrl/save_grn</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Authorization" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="WRN_Logout_${UserId}" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;gmd_LoginId&quot;:&quot;${UserId}&quot;,&quot;gmd_refreshkey&quot;:&quot;K1XuAbsi0mZkp5oet8PpyG4pk4A&quot;,&quot;gmd_tokenkey&quot;:&quot;${Token}&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">AdminService-1.0/admin/ctrl/all_logout</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="Material Requisitionand Issue_100 Users" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.num_threads">100</stringProp>
+        <stringProp name="Threads initial delay">0</stringProp>
+        <stringProp name="Start users count">1</stringProp>
+        <stringProp name="Start users count burst">0</stringProp>
+        <stringProp name="Start users period">30</stringProp>
+        <stringProp name="Stop users count">5</stringProp>
+        <stringProp name="Stop users period">1</stringProp>
+        <stringProp name="flighttime">60</stringProp>
+        <stringProp name="rampUp">5</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+      </kg.apc.jmeter.threads.SteppingThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Login_Material Requi_Issue_Logout" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Material Requi_Issue_Login_${UserId}" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;gmd_LoginId&quot;:&quot;system&quot;,&quot;gmd_Password&quot;:&quot;W7qT9oD+/2+UinUzuVW60w==&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">AdminService-1.0/admin/ctrl/all_login</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex_Token" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">Token</stringProp>
+              <stringProp name="RegexExtractor.regex">&quot;l_token&quot;:&quot;(.+?)&quot;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="User_CSV" enabled="true">
+              <stringProp name="filename">C:/Users/HP/Desktop/DMS_ Load _Testing/New/GRN_user.csv</stringProp>
+              <stringProp name="fileEncoding"></stringProp>
+              <stringProp name="variableNames">UserId,Password</stringProp>
+              <boolProp name="ignoreFirstLine">true</boolProp>
+              <stringProp name="delimiter">,</stringProp>
+              <boolProp name="quotedData">false</boolProp>
+              <boolProp name="recycle">true</boolProp>
+              <boolProp name="stopThread">false</boolProp>
+              <stringProp name="shareMode">shareMode.all</stringProp>
+            </CSVDataSet>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Rgex_UserID" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">UserID</stringProp>
+              <stringProp name="RegexExtractor.regex">&quot;l_userid&quot;:&quot;(.+?)&quot;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Material Requi_Issue_Login Validate_${UserId}" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">AdminService-1.0/admin/ctrl/token_validate</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">100</stringProp>
+          </LoopController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get stock " enabled="false">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;istk_entity_code_ent&quot;:&quot;001001000000000000&quot;,&quot;istk_store_ent&quot;:&quot;001001001000000000&quot;,&quot;istk_store_sub_loc_stor&quot;:&quot;STOR000000000001&quot;,&quot;l_doctype_dtyp&quot;:&quot;DT0029&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">InventoryService-1.0/inventory/ctrl/get_stocktransaction</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Authorization" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Material Requi_Issue_Material Requisition" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+  &quot;l_Inv_Material_Requistion_Hdr_Model&quot;: {&#xd;
+    &quot;imrh_req_doc_dt&quot;: &quot;${Date}&quot;,&#xd;
+    &quot;imrh_wf_tag1_dttm&quot;: &quot;01&quot;,&#xd;
+    &quot;imrh_wf_series_serm&quot;: &quot;MR&quot;,&#xd;
+    &quot;imrh_req_type&quot;: &quot;U&quot;,&#xd;
+    &quot;imrh_req_user_id_user&quot;: &quot;${UserID}&quot;,&#xd;
+    &quot;imrh_req_dept_id_dept&quot;: &quot;&quot;,&#xd;
+    &quot;imrh_req_from_sub_stor&quot;: &quot;&quot;,&#xd;
+    &quot;l_req_from&quot;: &quot;${UserID}&quot;,&#xd;
+    &quot;imrh_req_to_sub_stor&quot;: &quot;STOR000000000001&quot;,&#xd;
+    &quot;imrh_req_issue_for&quot;: &quot;I&quot;,&#xd;
+    &quot;imrh_req_cost_center_gmst&quot;: &quot;GENM000000000002&quot;,&#xd;
+    &quot;imrh_req_remarks&quot;: &quot;Test&quot;,&#xd;
+    &quot;imrh_entity_code_ent&quot;: &quot;001001000000000000&quot;,&#xd;
+    &quot;imrh_store_ent&quot;: &quot;001001001000000000&quot;,&#xd;
+    &quot;imrh_fy_display_desc&quot;: &quot;2024-25&quot;,&#xd;
+    &quot;imrh_fy_id_fyrm&quot;: &quot;FINM000000000003&quot;,&#xd;
+    &quot;imrh_wf_doctype_dtyp&quot;: &quot;DT0029&quot;,&#xd;
+    &quot;imrh_isdraft&quot;: &quot;NO&quot;,&#xd;
+    &quot;imrh_isworkflowapproved&quot;: &quot;YES&quot;,&#xd;
+    &quot;imrh_wf_tag2_dttm&quot;: &quot;&quot;&#xd;
+  },&#xd;
+  &quot;l_Inv_Material_Requistion_Dtl_List&quot;: [&#xd;
+    {&#xd;
+      &quot;imrd_item_id_item&quot;: &quot;ITEM000000000175&quot;,&#xd;
+      &quot;imrd_uom_unit&quot;: &quot;BAG&quot;,&#xd;
+      &quot;imrd_qty&quot;: 4,&#xd;
+      &quot;imrd_qty_rec&quot;: 1,&#xd;
+      &quot;imrd_item_name&quot;: &quot;DARK MILK CHOCOLATE&quot;,&#xd;
+      &quot;imrd_item_code&quot;: &quot;ITEM88&quot;,&#xd;
+      &quot;l_index&quot;: 0&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">InventoryService-1.0/inventory/ctrl/save_update_material_requisition</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Authorization" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regex_IMRH_ID" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">IMRH_ID</stringProp>
+                <stringProp name="RegexExtractor.regex">&quot;l_id&quot;:&quot;(.+?)&quot;</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default"></stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Material Requi_Issue_Get Item Requisition" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;imrh_id&quot;:&quot;${IMRH_ID}&quot;,&quot;imrh_wf_doctype_dtyp&quot;:&quot;DT0032&quot;}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">InventoryService-1.0/inventory/ctrl/get_item_requisition</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Authorization" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Material Requi_Issue_Material Issue" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+  &quot;l_Inv_Transaction_Hdr_Model&quot;: {&#xd;
+    &quot;invt_reference_no&quot;: &quot; &quot;,&#xd;
+    &quot;invt_reference_dt&quot;: &quot; &quot;,&#xd;
+    &quot;invt_entity_code_ent&quot;: &quot;001001000000000000&quot;,&#xd;
+    &quot;invt_fy_display_desc&quot;: &quot;2024-25&quot;,&#xd;
+    &quot;invt_fy_id_fyrm&quot;: &quot;FINM000000000003&quot;,&#xd;
+    &quot;invt_doc_dt&quot;: &quot;2024-04-22&quot;,&#xd;
+    &quot;invt_wf_doctype_dtyp&quot;: &quot;DT0032&quot;,&#xd;
+    &quot;invt_wf_tag1_dttm&quot;: &quot; &quot;,&#xd;
+    &quot;invt_wf_tag2_dttm&quot;: &quot; &quot;,&#xd;
+    &quot;invt_wf_series_serm&quot;: &quot;ISS&quot;,&#xd;
+    &quot;invt_doc_sub_stor&quot;: &quot;STOR000000000001&quot;,&#xd;
+    &quot;invt_requistion_id_imrh&quot;: &quot;${IMRH_ID}&quot;,&#xd;
+    &quot;l_inv_req_to_sub_store_discription&quot;: &quot;Main Store&quot;,&#xd;
+    &quot;invt_req_to_sub_stor&quot;: &quot; &quot;,&#xd;
+    &quot;invt_isdraft&quot;: &quot;NO&quot;,&#xd;
+    &quot;invt_isworkflowapproved&quot;: &quot;YES&quot;,&#xd;
+    &quot;invt_req_entity_code_ent&quot;: null,&#xd;
+    &quot;invt_doc_store_ent&quot;: &quot;001001001000000000&quot;,&#xd;
+    &quot;invt_req_user_id_user&quot;: &quot;${UserID}&quot;,&#xd;
+    &quot;invt_req_dept_id_dept&quot;: &quot; &quot;,&#xd;
+    &quot;invt_req_party_id_acnt&quot;: &quot; &quot;,&#xd;
+    &quot;invt_remarks&quot;: &quot; &quot;,&#xd;
+    &quot;invt_req_to_store_ent&quot;: &quot; &quot;&#xd;
+  },&#xd;
+  &quot;l_Inv_Transaction_Dtl_List&quot;: [&#xd;
+    {&#xd;
+      &quot;l_batch_list&quot;: [],&#xd;
+      &quot;invd_item_id_item&quot;: &quot;ITEM000000000175&quot;,&#xd;
+      &quot;invd_item_code&quot;: &quot;ITEM88&quot;,&#xd;
+      &quot;invd_item_name&quot;: &quot;DARK MILK CHOCOLATE&quot;,&#xd;
+      &quot;invd_batch&quot;: &quot;Batch&quot;,&#xd;
+      &quot;invd_expiry_date&quot;: &quot;2024-08-31&quot;,&#xd;
+      &quot;invd_stock_uom_unit&quot;: &quot;BAG&quot;,&#xd;
+      &quot;invd_qty&quot;: 1,&#xd;
+      &quot;invd_rate&quot;: 23.6,&#xd;
+      &quot;invd_issue_uom_unit&quot;: &quot;BAG&quot;,&#xd;
+      &quot;invd_uom_conv&quot;: 1,&#xd;
+      &quot;l_inv_transaction_requested_qty&quot;: 1,&#xd;
+      &quot;l_invt_transaction_stock_avbl&quot;: 4,&#xd;
+      &quot;invd_clr&quot;: 0,&#xd;
+      &quot;invd_fat&quot;: 0,&#xd;
+      &quot;invd_snf&quot;: 0,&#xd;
+      &quot;invd_protein&quot;: 0,&#xd;
+      &quot;invd_qtykg&quot;: 0,&#xd;
+      &quot;invd_fatkg&quot;: 0,&#xd;
+      &quot;invd_snfkg&quot;: 0,&#xd;
+      &quot;l_issue_in_stock_unit&quot;: 4,&#xd;
+      &quot;l_invd_expiry_date_display&quot;: &quot;31/Aug/2024&quot;,&#xd;
+      &quot;invd_serial_no&quot;: 0&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">InventoryService-1.0/inventory/ctrl/save_update_transaction</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Authorization" elementType="Header">
+                    <stringProp name="Header.name">Authorization</stringProp>
+                    <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Material Requi_Issue_Logout_${UserId}" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;gmd_LoginId&quot;:&quot;${UserId}&quot;,&quot;gmd_refreshkey&quot;:&quot;K1XuAbsi0mZkp5oet8PpyG4pk4A&quot;,&quot;gmd_tokenkey&quot;:&quot;${Token}&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">AdminService-1.0/admin/ctrl/all_logout</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${Token}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">D:\Old Hospycare Doc\Load Testing\apache-jmeter-5.5\CSV\GRN_user.csv</stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
